@@ -22,7 +22,7 @@ for(i in 1:999){
   null <- null %>%
     mutate(year=2020, severity="U")
   
-  write.csv(null, str_c("Bootstrapped Nulls/U2020_", i, ".csv"))
+  write.csv(null, str_c("Bootstrapped Nulls/2020/U2020_", i, ".csv"), row.names=FALSE)
 }
 
 for(i in 1:999){
@@ -50,5 +50,5 @@ for(i in 1:999){
   
   null <- null_beta_rep(data, traits, Nsim=999)
   
-  write.csv(null, str_c("Bootstrapped Nulls/2020/H2020_", i, ".csv"))
+  write.csv(null, str_c("Bootstrapped Nulls/2020/H2020_", i, ".csv"), row.names=FALSE)
 }
